@@ -1,11 +1,14 @@
 from .exceptions import *
+import random
 
 # Complete with your own, just for fun :)
-LIST_OF_WORDS = []
+LIST_OF_WORDS = ['Cats', 'Swimming', 'Music', 'Reddit', 'Zelda']
 
 
 def _get_random_word(list_of_words):
-    pass
+    if not list_of_words:
+        raise InvalidListOfWordsException("List cannot be empty")
+    return random.choice(list_of_words)
 
 
 def _mask_word(word):
